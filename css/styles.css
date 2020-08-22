@@ -28,8 +28,8 @@ body {
     font-size: 14px;
 }
 
-.col-1, .col-2{
-    flex: 1 1 50%;
+.col-1 .col-2{
+   flex: 1 1 50%;
 }
 
 h1,
@@ -51,7 +51,7 @@ ul {
 	display: flex;
 	font-family: var(--font-family);
 	justify-content: space-between;
-    padding: 2rem 5.5rem;
+    padding: 2rem 4rem;
     align-items: center;
 }
 
@@ -84,7 +84,7 @@ ul {
  .container {
 	width: 100%;
 	display: flex;
-	padding : 0 3rem 10rem;
+	padding : 0 2rem 8rem;
 	align-items: center;
 }
 /* Container */
@@ -92,7 +92,7 @@ ul {
  .container-2{
 	width: 100%;
 	display: flex;
-	padding: 2rem 3rem ;
+	padding: 2rem 2rem ;
 	align-items: center;
 }
 /*Container-2*/
@@ -100,7 +100,7 @@ ul {
 
 /*----- Section-1 -----*/
  .section-1{
-	padding: 0 3rem;
+	padding: 0 2rem;
 }
 
 .sec-1-header{
@@ -154,7 +154,7 @@ ul {
 	  background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-		padding: 10rem 3rem;
+		padding: 8rem 2rem;
 }
 
 .section-2-heading{
@@ -248,22 +248,24 @@ ul {
 }
 
 .section-3-para{
-	margin-right: 10%;
+	margin-right: 5%;
+  padding: 0 30% 0 0;
 }
 
 .col-3{
-    padding-right: 15%;
+    padding-right: 10%;
     flex-basis: 50%;
     line-height: 1.8;
+		padding: 1rem;
 }
 
 .section-3-email{
-    width: 80%;
+    width: 100%;
 		padding: 1rem;
 		margin-bottom: 1rem;
 }
 .form-3{
-    padding-left: 10%;
+    padding-left: 8%;
 }
 
 .container-3{
@@ -273,7 +275,7 @@ ul {
     align-items: center;
 }
 .button-section-3{
-	padding: 0.7rem 2rem;
+	padding: 1rem 1rem;
 	background: var(--color-3);
 	color: var(--color-5);
 	font-family: var(--font-family);
@@ -304,6 +306,8 @@ ul {
 	 align-items: flex-start;
    justify-content: space-between;
 	 padding-left: 10rem;
+	 padding-right: 20rem;
+	 flex-wrap: wrap;
 }
 
 
@@ -350,11 +354,6 @@ ul {
     display: flex;
 }
 
-.container-footer{
-    padding-right: 20rem;
-    flex-wrap: wrap;
-}
-
 .fab{
     color: #fff;
     font-size: 1rem;
@@ -373,7 +372,9 @@ ul {
     background: #fff;
 }
 
-
+.fa-facebook-f::before{
+	padding: 0.2rem;
+}
 
 .inner {
 	padding: 3rem 3rem 1rem 0;
@@ -402,13 +403,36 @@ ul {
         padding-right: 5rem;
     }
 
+	 .container-3{
+		 position: relative;
+		 right: 5%;
+		 flex-direction: column;
+		 justify-content: center;
+		 text-align: center;
+		 padding: 1rem;
+		 margin: 0;
+
+	 }
+
     .col-3{
-        padding-right: 3rem;
-    }
+      margin-left: 25%;
+			flex-basis: auto;
+		}
 
     .form-3{
-        padding-left: 3rem;
+				margin-bottom: 5%;
+				margin-left: 3.5%;
     }
+
+		 .section-3-heading{
+			 margin: 0 20% 0 0;
+			 padding: 0;
+		 }
+
+		.section-3-para{
+			line-height: 1.5;
+			margin: 0 0 0 12%;
+		}
 
     .sec-1-p{
         padding-right: 2rem;
@@ -429,12 +453,12 @@ ul {
 }
 .footer-list a:hover{
 	text-decoration: underline;
+	color: #fff;
 }
 
 @media(max-width: 768px){
     .container{
         flex-direction: column;
-        padding: 0 0 0 1.5rem;
     }
 
     .site-logo{
@@ -442,8 +466,7 @@ ul {
     }
 
     .main-header{
-        padding-left: 1rem;
-        padding-right: 1rem;
+        padding: 3rem;
     }
 
     .navigation-item{
@@ -452,15 +475,12 @@ ul {
         font-size: .85rem;
     }
 
-    h1,h2{
-        font-size: 1.3rem;
-    }
-
     .form{
-        padding-right: 0;
+        padding: 0;
+				margin-left: 10%;
     }
 
-    .section-1 .container{
+    .section-1 .container, .section-2 .container-2{
         padding: 3rem 1.5rem;
     }
 
@@ -468,8 +488,16 @@ ul {
         order: -1;
     }
 
+		.section-2 .col-2{
+			margin-left: 2rem;
+		}
+
+		.section-1 .col-1{
+		  margin-left: 3rem;
+		}
+
     .sec-1-header{
-        padding-top: 1.5rem;
+        padding: 1rem 3rem;
         text-align: center;
         font-size: 1.3rem;
     }
@@ -495,11 +523,10 @@ ul {
         padding-right: 1rem;
     }
 
-    .section-2-link{
-       left: 20%;
-    }
+
 
     .container-2{
+			  flex-direction: column;
         padding: 3rem 1rem 3rem 1.5rem;
     }
 
@@ -518,26 +545,35 @@ ul {
         padding: 1rem;
     }
 
+		.container-3{
+			text-align: center;
+			margin: 0;
+			padding: 0;
+			right: 0;
+		}
+
+		.form-3{
+			margin-bottom: 0.5rem;
+			padding: 2rem;
+		}
+
+		.col-3{
+			margin: 3rem 4rem 1rem;
+			padding:0;
+		}
+
+		.section-3-heading{
+			margin: 0;
+			padding: 0;
+		}
+
+		.section-3-para{
+			margin: 1rem;
+			padding: 0.5rem;
+		}
+
     .site-logo-footer{
         margin-left: .7rem;
-    }
-
-    .container-3{
-        justify-content: center;
-        text-align: center;
-        padding: 2rem;
-    }
-
-    .section-3-email, .button-section-3{
-        width: 100%;
-    }
-
-    .col-3{
-        padding-right: 0;
-    }
-
-    .form-3{
-        padding: 1rem 0;
     }
 
     .container-footer ul:not(:last-child){
